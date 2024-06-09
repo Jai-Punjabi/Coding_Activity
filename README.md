@@ -1,2 +1,2 @@
 # Coding_Activity
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+Cokes and Codes, C/C++, JAVA, Python
