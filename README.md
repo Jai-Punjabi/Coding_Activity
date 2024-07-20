@@ -1,2 +1,2 @@
 # Coding_Activity
-Cokes and Codes, C/C++, JAVA, Python
+Cokes and Codes, C/C++, JAVA
