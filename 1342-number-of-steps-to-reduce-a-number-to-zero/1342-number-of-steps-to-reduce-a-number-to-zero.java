@@ -1,15 +1,13 @@
 class Solution {
     public int numberOfSteps(int num) {
-        return helper(num ,  0);
+        int steps = 0;
+        
+        while (num > 0) {
+            // If the number is even, divide by 2; if odd, subtract 1.
+            num = (num % 2 == 0) ? num / 2 : num - 1;
+            steps++;
+        }
+        
+        return steps;
     }
-  
-  private int helper(int num , int steps){
-    if(num==0)
-      return steps;
-    
-    if(num%2 == 0)
-      return helper(num/2 , steps + 1);
-    
-    else return helper(num - 1 , steps + 1);
-  }
 }
