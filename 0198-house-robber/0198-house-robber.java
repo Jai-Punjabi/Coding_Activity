@@ -1,16 +1,18 @@
 class Solution {
     public int rob(int[] nums) {
-        if(nums.length == 1)return nums[0];
-        int[] arr = new int[nums.length];
-        arr[0] = nums[0];
-        arr[1] = Math.max(nums[1],arr[0]);
+        if(nums == null || nums.length == 0) 
+            return 0;
+
+        if(nums.length == 1) 
+            return nums[0];
         
-        for(int i=2;i<nums.length;i++){
-            int incHouse = arr[i-2] + nums[i];
-            int excHouse = arr[i-1];
-            arr[i] = Math.max(incHouse,excHouse);
+        for(int i = 1; i < nums.length; i++) {
+            if(i == 1) {
+                nums[i] = Math.max(nums[i], nums[i - 1]);
+            } else {
+                nums[i] = Math.max(nums[i - 1], nums[i] + nums[i - 2]);
+            }
         }
-        
-        return arr[nums.length - 1];
+        return nums[nums.length - 1];
     }
 }
